@@ -1,40 +1,18 @@
 import React from 'react';
-import 'react-native-gesture-handler';
-// import the screens
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { Text, View, } from 'react-native';
 // import the screens
 import Start from './components/Start';
 import Chat from './components/Chat';
+// import react Navigation
+import { createAppContainer } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation-stack'
 
-//Create the navigator
-const Stack = createStackNavigator();
+const navigator = createStackNavigator({
+  Start: { screen: Start },
+  Chat: { screen: Chat }
+});
 
-export default class ChatApp extends React.Component {
-constructor (props) {  
-super(props)
+const navigatorContainer = createAppContainer(navigator);
 
-} 
-
-  render() {
-    return (
-      <NavigationContainer>
-        <Stack.Navigator
-          initialRouteName="Start"
-        > 
-        <Stack.Screen
-          name="Start"
-          component={Start}
-        />
-        <Stack.Screen
-          name="Chat"
-          component={Chat}
-        />
-        </Stack.Navigator>
-      </NavigationContainer>
-    );
-  }
-}
-
-
-
+// Export it as the root component
+export default navigatorContainer;
