@@ -44,6 +44,7 @@ export default class Start extends React.Component {
                   accessibilityLabel='More options'
                   accessibilityHint='Allows you to choose the background colour of the chatroom.'
                   accessibilityRole='button'
+                   // setting of state
                   onPress={() => this.setState({color: '#090C08'})}
                   style={[styles.colorButton, styles.color1]}
                 />
@@ -52,6 +53,7 @@ export default class Start extends React.Component {
                   accessibilityLabel='More options'
                   accessibilityHint='Allows you to choose the background colour of the chatroom.'
                   accessibilityRole='button'
+                   // setting of state
                   onPress={() => this.setState({color: '#474056'})}
                   style={[styles.colorButton, styles.color2]}
                 />
@@ -60,6 +62,7 @@ export default class Start extends React.Component {
                   accessibilityLabel='More options'
                   accessibilityHint='Allows you to choose the background colour of the chatroom.'
                   accessibilityRole='button'
+                   // setting of state
                   onPress={() => this.setState({color: '#8A95A5'})}
                   style={[styles.colorButton, styles.color3]}
                 />
@@ -68,6 +71,7 @@ export default class Start extends React.Component {
                   accessibilityLabel='More options'
                   accessibilityHint='Allows you to choose the background colour of the chatroom.'
                   accessibilityRole='button'
+                   // setting of state
                   onPress={() => this.setState({color: '#B9C6AE'})}
                   style={[styles.colorButton, styles.color4]}
                 />
