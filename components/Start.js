@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View, StyleSheet, Text, TextInput, ImageBackground, Image } from 'react-native';
+import { TouchableOpacity, View, StyleSheet, Text, TextInput, ImageBackground, Image, KeyboardAvoidingView } from 'react-native';
 import { Button } from 'react-native-paper';
 
 export default class Start extends React.Component {

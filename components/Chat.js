@@ -1,91 +1,161 @@
 import React, { Component } from 'react';
-//Platform - determines the current OS
-//KeyboardAvoidingView solves Android issue: keyboard hiding messsage input field 
-import { StyleSheet, View, Platform, KeyboardAvoidingView } from 'react-native';
 import { GiftedChat, Bubble } from 'react-native-gifted-chat'
+import { StyleSheet, View, Platform, Text, KeyboardAvoidingView  } from 'react-native';
+//import firestore
+const firebase = require('firebase');
+require('firebase/firestore');
 
-export default class Chat extends Component { 
-  constructor() {
-    super();
-    this.state = {
-      messages: [],
-    }
-  }
+export default class Chat extends Component {
 
-  componentDidMount() {
-    this.setState({
-      messages: [
-        {
-          _id: 1,
-          text: 'Hello Developer',
-          createdAt: new Date(),
-          user: {
-            _id:2,
-            name: 'React Native',
-            avatar: 'https://placeimg.com/140/140/any',
-          },
-        },
-        {
-          _id: 2,
-          // system message passing name props from state thanks to the navigate function in Start.js
-          text: this.props.navigation.state.params.name + ' has entered the chatroom',
-          createdAt: new Date(),
-          // converts message into a system message
-          system: true,
-        }
-      ], 
-    })
-  }
+static navigationOptions = ({ navigation }) => {
+  return {
+    title: navigation.state.params.name,
+  };
+};
 
-  onSend(messages = []) {
-    this.setState(previousState => ({
-        // the message received is appended to state "messages" to be displayed in chat 
-      messages: GiftedChat.append(previousState.messages, messages),
-    }))
-  }
-
-  // method to personalise bubble properties
-  renderBubble(props) { return ( <Bubble {...props} 
-    wrapperStyle={{
-        left: {
-          backgroundColor: 'white',
-        },
-        right: {
-          backgroundColor: 'black'
-        }
-      }} />
-    )
-  }
-
-  // title to be seen in the header - state set in Start.js
-  static navigationOptions = ({ navigation }) => {
-    return {
-      title: navigation.state.params.name,
-    };
+constructor(){
+  super();
+  this.state = {
+    messages: [],
+    uid: 0,
+    user: {
+      _id: '',
+      name: '',
+      avatar: ''
+    },
   };
 
-  render() {
-    return (
-      <View
-        // background color choice - props passed from Start.js
-        style={[styles.container, { backgroundColor: this.props.navigation.state.params.color }]} 
-      >
-
-          <GiftedChat
-          renderBubble={this.renderBubble.bind(this)}
-          messages={this.state.messages}
-          onSend={messages => this.onSend(messages)}
-          user={{
-            _id: 1,
-          }}
-          />
-
-          { Platform.OS === 'android' ? <KeyboardAvoidingView behavior="height" /> : null}
-
-      </View>
-      )
-  }
+  if (!firebase.apps.length) {
+    firebase.initializeApp({
+      apiKey: "AIzaSyABtEeaMnX10l0BA2lBVZsSvhRPsbT1xs0",
+      authDomain: "react-native-chat-app-db384.firebaseapp.com",
+      databaseURL: "https://react-native-chat-app-db384.firebaseio.com",
+      projectId: "react-native-chat-app-db384",
+      storageBucket: "react-native-chat-app-db384.appspot.com",
+      messagingSenderId: "150324992541",
+      appId: "1:150324992541:web:a80d7d4bf671b149acc4f4",
+      measurementId: "G-6XNLK09WJ5"
+    });
+  } 
+  this.referenceMessages = firebase.firestore().collection('messages');
 }
+
+onCollectionUpdate = (querySnapshot) => {
+  const messages = [];
+  querySnapshot.forEach((doc) => {
+    var data = doc.data();
+    messages.push({
+      _id: data._id,
+      createdAt: data.createdAt.toDate(),
+      text: data.text,
+      user: {
+        _id: data.user._id,
+        name: data.user.name,
+        avatar: data.user.avatar,
+      },
+    });
+  });
+  this.setState({
+    messages,
+  });
+};
+
+addMessage() {
+  this.referenceMessages.add({
+    _id: this.state.messages[0]._id,
+    text: this.state.messages[0].text,
+    createdAt: this.state.messages[0].createdAt,
+    user: this.state.messages[0].user,
+    uid: this.state.uid
+  });
+}
+
+componentDidMount() {
+  this.authUnsubscribe = firebase.auth().onAuthStateChanged(async user => {
+    if (!user) {
+      user = await firebase.auth().signInAnonymously();
+    }
+    this.unsubscribe = this.referenceMessages.onSnapshot(
+      this.onCollectionUpdate
+    );
+  });
+  this.setState({
+    messages: [
+      {
+        _id: 1,
+        text: "Hello everybody",
+        createdAt: new Date(),
+        user: {
+          _id: 2,
+          name: "React Native",
+          avatar: "https://placeimg.com/140/140/any"
+        }
+      },
+      {
+        _id: 2,
+        text: this.props.navigation.state.params.name + ' has entered the chatroom',
+        createdAt: new Date(),
+        system: true
+      }
+    ]
+  });
+}
+
+    componentWillUnmount() {
+      // stop listening to authentication
+      this.authUnsubscribe();
+    }
+
+onSend(messages = []) {
+  this.setState(previousState => ({
+    messages: GiftedChat.append(previousState.messages, messages),
+  }),
+    () => {
+      this.addMessage();
+    })
+};
+
+//speech bubble props
+renderBubble(props) {
+  return (
+    <Bubble
+      {...props}
+      wrapperStyle={{
+        right: {
+          backgroundColor: 'lightgray',
+        }
+      }}
+      textStyle={{
+        left: {
+          color: 'black',
+        },
+        right: {
+          color: '#000',
+        },
+      }}
+    />
+  )
+}
+
+    render() {
+  return (
+    <View
+				style={[styles.container, { backgroundColor: this.props.navigation.state.params.color }]}
+			>
+
+        <GiftedChat
+        renderBubble={this.renderBubble.bind(this)}
+        messages={this.state.messages}
+        onSend={messages => this.onSend(messages)}
+        user={{
+          _id: 1,
+        }}
+      />
+      {Platform.OS === 'android' ? <KeyboardAvoidingView /> : null }
+</View>
+  )
+}
+ }
 
 
 const styles = StyleSheet.create({
