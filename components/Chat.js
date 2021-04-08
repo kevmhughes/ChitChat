@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import { GiftedChat, Bubble, InputToolbar } from 'react-native-gifted-chat'
-import { StyleSheet, View, Platform, KeyboardAvoidingView  } from 'react-native';
+import { StyleSheet, View, Platform, KeyboardAvoidingView,LogBox } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import NetInfo from '@react-native-community/netinfo';
+import CustomActions from './CustomActions';
+import MapView from 'react-native-maps';
 
 //import firestore
 const firebase = require('firebase');
 require('firebase/firestore');
+
+// Ignore log notification by message
+LogBox.ignoreLogs(['Warning: ...']); 
+//Ignore all log notifications
+LogBox.ignoreAllLogs();
 
 export default class Chat extends Component {
 
@@ -22,10 +29,12 @@ constructor(){
     messages: [],
     uid: 0,
     isConnected: false,
+    image: null,
+    location: null,
     user: {
       _id: '',
       name: '',
-      avatar: ''
+      avatar: '',
     },
   };
 
@@ -46,12 +55,16 @@ constructor(){
 
 onCollectionUpdate = (querySnapshot) => {
   const messages = [];
+  // loop through documents
   querySnapshot.forEach((doc) => {
+    // get data snapshot
     var data = doc.data();
     messages.push({
       _id: data._id,
       createdAt: data.createdAt.toDate(),
-      text: data.text,
+      text: data.text.toString(),
+      image: data.image || '',
+      location: data.location,
       user: {
         _id: data.user._id,
         name: data.user.name,
@@ -67,10 +80,13 @@ onCollectionUpdate = (querySnapshot) => {
 addMessage() {
   this.referenceMessages.add({
     _id: this.state.messages[0]._id,
-    text: this.state.messages[0].text,
+    text: this.state.messages[0].text || '',
     createdAt: this.state.messages[0].createdAt,
     user: this.state.messages[0].user,
-    uid: this.state.uid
+    image: this.state.messages[0].image || '',
+    location: this.state.messages[0].location || null,
+    uid: this.state.uid,
+    sent: true,
   });
 }
 
@@ -128,8 +144,12 @@ componentDidMount() {
             user: {
               _id: 2,
               name: "React Native",
-              avatar: "https://placeimg.com/140/140/any"
-            }
+              avatar: 'https://placeimg.com/140/140/any',
+            },
+            location: {
+              latitude: 48.864601,
+              longitude: 2.398704,
+            },
           },
           {
             _id: 2,
@@ -196,18 +216,53 @@ renderInputToolbar(props) {
   }
 }
 
+renderCustomActions = (props) => {
+  return <CustomActions {...props} />;
+};
+
+renderCustomView (props) {
+  const { currentMessage} = props;
+  if (currentMessage.location) {
+    return (
+      <View>
+        <MapView
+          style={{width: 250,
+            height: 200,
+            borderRadius: 13,
+            margin: 3}}
+          region={{
+            latitude: currentMessage.location.latitude,
+            longitude: currentMessage.location.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        />
+      </View>
+    );
+  }
+  return null;
+}
 
     render() {
   return (
     <View
 				style={[styles.container, { backgroundColor: this.props.navigation.state.params.color }]}
 			>
+        {this.state.image && (
+          <Image
+            source={{ uri: this.state.image.uri }}
+            style={{ width: 200, height: 200 }}
+          />
+        )}
 
         <GiftedChat
+        renderCustomView={this.renderCustomView}
         renderInputToolbar={this.renderInputToolbar.bind(this)}
+        renderActions={this.renderCustomActions}
         renderBubble={this.renderBubble.bind(this)}
         messages={this.state.messages}
         onSend={messages => this.onSend(messages)}
+        image={this.state.image}
         user={{
           _id: 1,
         }}
@@ -224,3 +279,4 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+

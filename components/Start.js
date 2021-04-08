@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View, StyleSheet, Text, TextInput, ImageBackground, Image, KeyboardAvoidingView } from 'react-native';
 import { Button } from 'react-native-paper';
 
+
 export default class Start extends React.Component {
   constructor (props) {  
     super(props);
@@ -17,7 +18,7 @@ export default class Start extends React.Component {
 
         <ImageBackground source={require('../assets/background-image.png')} style={styles.backgroundImage}>
         
-        <Text style={styles.appTitle}>App Title</Text>
+        <Text style={styles.appTitle}>ChitChat</Text>
         
         <View style={styles.container}>
 
