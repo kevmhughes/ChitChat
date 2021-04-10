@@ -2,7 +2,6 @@ import React from 'react';
 import { TouchableOpacity, View, StyleSheet, Text, TextInput, ImageBackground, Image, KeyboardAvoidingView } from 'react-native';
 import { Button } from 'react-native-paper';
 
-
 export default class Start extends React.Component {
   constructor (props) {  
     super(props);
@@ -24,8 +23,7 @@ export default class Start extends React.Component {
 
           <View style={styles.textInputBox}>
 
-              <Image source={require('../assets/icon.svg')}  
-                style={styles.imageStyle}/>
+              <Image source={require('../assets/user-icon.png')}  style={styles.imageStyle}/>
 
               <TextInput
                 placeholder='Your Name'
@@ -133,7 +131,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   imageStyle: {
-    marginTop: 10,
+    marginTop: 18,
     marginLeft: 5,
     marginRight: 5,
     height: 20,

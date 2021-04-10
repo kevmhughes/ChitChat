@@ -226,10 +226,7 @@ renderCustomView (props) {
     return (
       <View>
         <MapView
-          style={{width: 250,
-            height: 200,
-            borderRadius: 13,
-            margin: 3}}
+          style={styles.map}
           region={{
             latitude: currentMessage.location.latitude,
             longitude: currentMessage.location.longitude,
@@ -277,6 +274,12 @@ renderCustomView (props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  map: {
+    width: 250,
+    height: 200,
+    borderRadius: 13,
+    margin: 3
   },
 });
 
