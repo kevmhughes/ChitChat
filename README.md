@@ -1,7 +1,6 @@
 # react-native-chat-app
 
 ## Description
-__________________________
 react-native-chat-app is a chat app similar to Whatsapp, where users can do the following:
 
 1) send messages 
@@ -10,8 +9,9 @@ react-native-chat-app is a chat app similar to Whatsapp, where users can do the 
 4) share their location
 
 # Take a Look at the App
-__________________________
+![Image of Yaktocat]
 (https://octodex.github.com/images/yaktocat.png)
+
 (https://github.com/kevmhughes/react-native-chat-app/blob/main/readme-images/img1.png)
 
 (https://github.com/kevmhughes/react-native-chat-app/blob/main/readme-images/app-on-iOS.MP4?raw=true)
