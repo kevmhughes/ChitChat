@@ -22,6 +22,17 @@ Made with **React Native**.
 <p>
 <img src="readme-images/app-on-iOS.gif"/>
 
+# Running the application
+
+1. Clone the application: 
+`git clone https://github.com/kevmhughes/ChitChat`
+
+2. Enter the root folder: 
+`cd ChitChat`
+
+3. Install dependencies:
+
+
 # Tools Used
 
 ### Frameworks
@@ -73,21 +84,7 @@ Database configuration (which one, where to put database credentials, etc.)
     "react-navigation-stack": "^2.10.4"
 
 
-# Running the application
 
-1. Clone the application: 
-`git clone https://github.com/kevmhughes/ChitChat`
-
-2. Enter the root folder: 
-`cd ChitChat`
-
-3. Install dependencies:
-
-go mod download
-
-Run the application
-
-make run
 
 ## 1.Expo
 Install the Expo CLI on your machine:
@@ -96,3 +93,4 @@ https://docs.expo.io
 **Project dependencies**
 
 TRELLO board
+
