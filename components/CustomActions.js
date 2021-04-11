@@ -16,10 +16,12 @@ export default class CustomActions extends React.Component {
       }
 
       //Choose an image 
-      pickImage = async () => {
-        const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+    pickImage = async () => {
+        try {
+          const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+        
         if (status === 'granted') {
-          let result = await ImagePicker.launchImageLibraryAsync({
+          const result = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: 'Images',
           }).catch(error => console.log(error));
     
@@ -27,37 +29,49 @@ export default class CustomActions extends React.Component {
             const imageUrl = await this.uploadImage(result.uri);
             this.props.onSend({ image: imageUrl });
           }
-    
+        }
+        } catch (error) {
+        console.log(error.message);
         }
     };
 
     //Take a photograph
     takePhoto = async () => {
+        try {
         const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL, Permissions.CAMERA);
+    
         if (status === 'granted') {
-          let result = await ImagePicker.launchCameraAsync().catch(error => console.log(error));
+          const result = await ImagePicker.launchCameraAsync().catch(error => console.log(error));
     
           if (!result.cancelled) {
             const imageUrlLink = await this.uploadImage(result.uri);
             this.props.onSend({ image: imageUrlLink });
           }
         }
+        } catch (error) {
+            console.log(error.message);
+        }
     };
 
     //Get and send location
     getLocation = async () => {
+        try {
         const { status } = await Permissions.askAsync(Permissions.LOCATION);
+    
         if (status === 'granted') {
-            let location = await Location.getCurrentPositionAsync({}).catch(error => console.log(error));
-
-            if (location) {
-                this.props.onSend({
-                    location: {
-                      longitude: location.coords.longitude,
-                      latitude: location.coords.latitude,
-                    },
-                  });
-            }
+            const location = await Location.getCurrentPositionAsync({}).catch(error => console.log(error));
+    
+          if (location) {
+              this.props.onSend({
+                  location: {
+                    longitude: location.coords.longitude,
+                    latitude: location.coords.latitude,
+                  },
+              });
+          }
+        }
+        } catch (error) {
+            console.log(error.message);
         }
     };
 
@@ -65,10 +79,10 @@ export default class CustomActions extends React.Component {
 uploadImage = async(uri) => {
     const blob = await new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.onload = function() {
+      xhr.onload = () => {
         resolve(xhr.response);
       };
-      xhr.onerror = function(e) {
+      xhr.onerror = (e) => {
         console.log(e);
         reject(new TypeError('Network request failed'));
       };

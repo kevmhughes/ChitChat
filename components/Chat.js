@@ -58,7 +58,7 @@ onCollectionUpdate = (querySnapshot) => {
   // loop through documents
   querySnapshot.forEach((doc) => {
     // get data snapshot
-    var data = doc.data();
+    const data = doc.data();
     messages.push({
       _id: data._id,
       createdAt: data.createdAt.toDate(),
@@ -131,8 +131,12 @@ componentDidMount() {
       })
       this.authUnsubscribe = firebase.auth().onAuthStateChanged(async user => {
         if (!user) {
-          user = await firebase.auth().signInAnonymously();
-        }
+          try {
+              user = await firebase.auth().signInAnonymously();
+            } catch (error) {
+                console.log(error.message)
+            }
+      }
         this.unsubscribe = this.referenceMessages.orderBy("createdAt", "desc").onSnapshot(this.onCollectionUpdate);
       });
       this.setState({
@@ -153,7 +157,7 @@ componentDidMount() {
           },
           {
             _id: 2,
-            text: this.props.navigation.state.params.name + ' has entered the chatroom',
+            text: `${this.props.navigation.state.params.name} has entered the chatroom`,
             createdAt: new Date(),
             system: true
           }
