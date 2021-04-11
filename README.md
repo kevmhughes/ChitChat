@@ -9,11 +9,8 @@ react-native-chat-app is a chat app similar to Whatsapp, where users can do the 
 4) share their location
 
 # Take a Look at the App
-![Image of Yaktocat]
-(https://octodex.github.com/images/yaktocat.png)
-
-![image](readme-images/img1.png)
-![image](./readme-images/img1.png)
+![image](readme-images/img1.png | height=200)
+![image](./readme-images/img1.png | width=100)
 ![image](readme-images/app-on-iOS.MP4?raw=true)
 
 
