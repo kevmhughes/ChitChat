@@ -9,10 +9,10 @@ react-native-chat-app is a chat app similar to Whatsapp, where users can do the 
 4) share their location
 
 # Take a Look at the App
-<img src="readme-images/img1.png" data-canonical-src="readme-images/img1.png" height="250" />
-<img src="readme-images/img1.png" data-canonical-src="readme-images/img2.png" height="250" />
-<img src="readme-images/img1.png" data-canonical-src="readme-images/img3.png" height="250" />
-<img src="readme-images/img1.png" data-canonical-src="readme-images/img4.png" height="250" />
-<img src="readme-images/img1.png" data-canonical-src="readme-images/img5.png" height="250" />
-<img src="readme-images/img1.png" data-canonical-src="readme-images/img6.png" height="250" />
+<img src="readme-images/img1.png" height="250" />
+<img src="readme-images/img2.png" height="250" />
+<img src="readme-images/img3.png" height="250" />
+<img src="readme-images/img4.png" height="250" />
+<img src="readme-images/img5.png" height="250" />
+<img src="readme-images/img6.png" height="250" />
 
