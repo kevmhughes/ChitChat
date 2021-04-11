@@ -15,6 +15,9 @@ react-native-chat-app is a chat app similar to Whatsapp, where users can do the 
 (readme-images/img1.png)
 (./readme-images/img1.png)
 (../readme-images/img1.png)
+(img1.png)
+(./img1.png)
+(../img1.png)
 
 (https://github.com/kevmhughes/react-native-chat-app/blob/main/readme-images/img1.png)
 
