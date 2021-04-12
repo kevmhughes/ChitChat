@@ -1,28 +1,20 @@
 # ChitChat
 Made with **React Native**.
-### Description
+## Description
 **ChitChat** is a messenger service application  similar to WhatsApp, where users can do the following:
 
 * send and receive text messages
 * send and receive images, or photos
-* take photos with the mobile phone´s camera, and send them as a message
-* share the user´s location
+* take photos with the mobile phone's camera, and send them as a message
+* share the user's location
 * view messages, images, photos, and location offline
 
 # Take a Look at the App
-<p float="left">
-<img src="readme-images/img1.png" height="350" />
-<img src="readme-images/img2.png" height="350" />
-<img src="readme-images/img3.png" height="350" />
-<p>
-<p float="left">
-<img src="readme-images/img4.png" height="350" />
-<img src="readme-images/img5.png" height="350" />
-<img src="readme-images/img6.png" height="350" />
-<p>
-<img src="readme-images/ChitChat-on-iOS.gif"/>
-
-# Running the application
+<kbd>
+<img src="readme-images/ChitChat-on-iOS.gif" height="450"/>
+</kbd>
+ 
+# Setting Up the Application
 
 1. Install the Expo CLI on your machine:
 `npm install expo-cli g`
@@ -33,11 +25,15 @@ Made with **React Native**.
 2. Enter the root folder: 
 `cd ChitChat`
 
-4. Install dependencies in the root folder:
+4. Install dependencies in the root folder: [Dependencies](https://github.com/kevmhughes/ChitChat/blob/main/README.md#dependencies)
 
 
 5. Open the project in the root folder:
  `expo start`
+ 
+6. Download Android Studio: [Android Studio](https://developer.android.com/studio)
+
+7. Setting up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
 
 # Tools Used
 
@@ -54,7 +50,7 @@ Made with **React Native**.
 * Gifted Chat
 
 ### Database & Storage
-* Google Firebase
+* Google Firebase    
 
 ### Dependencies
 
@@ -85,4 +81,5 @@ Made with **React Native**.
     "react-navigation": "^4.4.4",
     "react-navigation-stack": "^2.10.4"
 
-Kanban board: https://trello.com/b/55YjPSOt/careerfoundry-51
+
+Kanban board: [see here](https://trello.com/b/55YjPSOt/careerfoundry-51)
