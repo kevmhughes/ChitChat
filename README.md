@@ -5,8 +5,8 @@ Made with **React Native**.
 
 * send and receive text messages
 * send and receive images, or photos
-* take photos with the mobile phone´s camera, and send them as a message
-* share the user´s location
+* take photos with the mobile phone's camera, and send them as a message
+* share the user's location
 * view messages, images, photos, and location offline
 
 # Take a Look at the App
