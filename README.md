@@ -31,7 +31,7 @@ Made with **React Native**.
 5. Open the project in the root folder:
  `expo start`
  
-6. Install Expo Go on your mobile device:[Expo Go](https://docs.expo.io/get-started/installation/)
+6. Install Expo Go on your mobile device: [Expo Go](https://docs.expo.io/get-started/installation/)
  
 6. Download Android Studio to create an Android emulator: [Android Studio](https://developer.android.com/studio)
 
