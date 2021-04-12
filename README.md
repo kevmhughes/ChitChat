@@ -11,7 +11,7 @@ Made with **React Native**.
 
 # Take a Look at the App
 <div align=”center”>
-<img src="readme-images/ChitChat-on-iOS.gif" height="450"/>
+<img src="readme-images/ChitChat-on-iOS.gif" height="450" align=”center”/>
 <div>
  
 # Running the application
