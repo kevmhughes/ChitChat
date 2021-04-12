@@ -35,7 +35,7 @@ Made with **React Native**.
  
 6. Download Android Studio to create an Android emulator: [Android Studio](https://developer.android.com/studio)
 
-7. Download Xcode to create an iOS simulatar: [Xcode](https://developer.apple.com/xcode/resources/)
+7. Download Xcode to create an iOS simulator: [Xcode](https://developer.apple.com/xcode/resources/)
 
 8. Set up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
 
