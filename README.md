@@ -37,13 +37,16 @@ Made with **React Native**.
 
 7. Download Xcode to create an iOS simulator: [Xcode](https://developer.apple.com/xcode/resources/)
 
-8. Set up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
+8. Create an account in Google Firebase: [Google Firebase](https://firebase.google.com)
 
-Modify the Firebase database details:
-your own AP, etc.
+9. Add Firebase, a NoSQL database the Project: [Add Firebase](https://firebase.google.com/docs/web/setup)
+Copy the contents of the config object from `{ apiKey:… to messagingSenderId:…}`. You will need to integrate this configuration info into the `firebase.initializeApp` object in the “Chat.js” file, which is what will allow the app to connect to Firestore.
 
-Create the storage:
-Use "messages" as the name...
+10. Create the storage for the videos/photos : [Create storage](https://firebase.google.com/docs/storage?authuser=0)
+
+Use "messages" as the name of the collection. 
+
+![Screenshot 2021-04-12 at 17 36 17](https://user-images.githubusercontent.com/48656356/114424687-a89bc280-9bb8-11eb-9bf3-647137f004c2.png)
 
 # Tools Used
 
