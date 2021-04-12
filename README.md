@@ -20,7 +20,7 @@ Made with **React Native**.
 <img src="readme-images/img5.png" height="350" />
 <img src="readme-images/img6.png" height="350" />
 <p>
-<img src="readme-images/app-on-iOS.gif"/>
+<img src="readme-images/ChitChat-on-iOS.gif"/>
 
 # Running the application
 
