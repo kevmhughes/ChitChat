@@ -1,6 +1,6 @@
 # ChitChat
 Made with **React Native**.
-# Description
+### Description
 **ChitChat** is a messenger service application  similar to WhatsApp, where users can do the following:
 
 * send and receive text messages
@@ -20,18 +20,24 @@ Made with **React Native**.
 <img src="readme-images/img5.png" height="350" />
 <img src="readme-images/img6.png" height="350" />
 <p>
-<img src="readme-images/app-on-iOS.gif" height="450"/>
+<img src="readme-images/app-on-iOS.gif"/>
 
 # Running the application
 
-1. Clone the application: 
+1. Install the Expo CLI on your machine:
+`npm install expo-cli g`
+
+2. Clone the application: 
 `git clone https://github.com/kevmhughes/ChitChat`
 
 2. Enter the root folder: 
 `cd ChitChat`
 
-3. Install dependencies:
+4. Install dependencies in the root folder:
 
+
+5. Open the project in the root folder:
+ `expo start`
 
 # Tools Used
 
@@ -93,4 +99,3 @@ https://docs.expo.io
 **Project dependencies**
 
 TRELLO board
-
