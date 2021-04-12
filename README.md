@@ -10,9 +10,9 @@ Made with **React Native**.
 * view messages, images, photos, and location offline
 
 # Take a Look at the App
-<div align=”center”>
-<img src="readme-images/ChitChat-on-iOS.gif" height="450" float=”center”/>
-<div>
+
+<img src="readme-images/ChitChat-on-iOS.gif" height="450"/>
+
  
 # Running the application
 
