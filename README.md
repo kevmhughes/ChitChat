@@ -28,9 +28,12 @@ Made with **React Native**.
 4. Install dependencies in the root folder: [Dependencies](https://github.com/kevmhughes/ChitChat/blob/main/README.md#dependencies)
 
 
-
 5. Open the project in the root folder:
  `expo start`
+ 
+6. Setting up Android Studio: [Download Android Studio](https://developer.android.com/studio)
+
+7. Setting up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
 
 # Tools Used
 
