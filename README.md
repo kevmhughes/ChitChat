@@ -43,7 +43,7 @@ Made with **React Native**.
 
 Copy the contents of the config object from `{ apiKey:… to messagingSenderId:…}`. You will need to integrate this configuration info into the `firebase.initializeApp` object in the “Chat.js” file, which is what will allow the app to connect to Firestore.
 
-Create a collection, name it "messages", and add the follwoing fields.
+In Cloud Firestore, create a collection, name it "messages", and add the follwoing fields.
 
 ![Screenshot 2021-04-12 at 17 36 17](https://user-images.githubusercontent.com/48656356/114424687-a89bc280-9bb8-11eb-9bf3-647137f004c2.png)
 
