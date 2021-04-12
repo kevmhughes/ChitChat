@@ -25,7 +25,7 @@ Made with **React Native**.
 2. Enter the root folder: 
 `cd ChitChat`
 
-4. Install dependencies in the root folder: [Dependencies](https://github.com/kevmhughes/ChitChat/blob/main/README.md#dependencies)
+4. Install dependencies in the root folder: `npm install expo-cli g`
 
 
 5. Open the project in the root folder:
@@ -36,8 +36,10 @@ Made with **React Native**.
 7. Setting up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
 
 Modifying the database:
+your own AP, etc.
 
 Creating the storage:
+Use "messages" as the name...
 
 # Tools Used
 
