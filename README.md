@@ -47,7 +47,7 @@ In Cloud Firestore, create a collection, name it "messages", and add the follwoi
 
 ![Screenshot 2021-04-12 at 17 36 17](https://user-images.githubusercontent.com/48656356/114424687-a89bc280-9bb8-11eb-9bf3-647137f004c2.png)
 
-10. Create the storage for the videos/photos: [Create storage](https://firebase.google.com/docs/storage?authuser=0)
+11. Create the storage for the videos/photos: [Create storage](https://firebase.google.com/docs/storage?authuser=0)
 
 
 # Tools Used
