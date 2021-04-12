@@ -35,6 +35,10 @@ Made with **React Native**.
 
 7. Setting up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
 
+Modifying the database:
+
+Creating the storage:
+
 # Tools Used
 
 ### Frameworks
