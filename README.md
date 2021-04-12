@@ -11,7 +11,7 @@ Made with **React Native**.
 
 # Take a Look at the App
 <p>
-<img src="readme-images/ChitChat-on-iOS.img1.png" height="450"/>
+<img src="readme-images/img1.png" height="450"/>
 <img src="readme-images/ChitChat-on-iOS.gif" height="450"/>
 </p>
  
