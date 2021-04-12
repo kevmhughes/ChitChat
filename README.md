@@ -27,7 +27,7 @@ Made with **React Native**.
 
 4. Install dependencies in the root folder:
 
-"@react-native-community/async-storage": "~1.12.0",
+    "@react-native-community/async-storage": "~1.12.0",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-native-community/netinfo": "^5.9.7",
     "@react-navigation/native": "^5.9.3",
