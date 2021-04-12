@@ -25,7 +25,7 @@ Made with **React Native**.
 2. Enter the root folder: 
 `cd ChitChat`
 
-4. Install dependencies in the root folder: `npm install expo-cli g`
+4. Install dependencies in the root folder: `npm install`
 
 
 5. Open the project in the root folder:
