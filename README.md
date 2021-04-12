@@ -24,14 +24,20 @@ Made with **React Native**.
 
 # Running the application
 
-1. Clone the application: 
+1. Install the Expo CLI on your machine:
+`npm install expo-cli g`
+
+2. Clone the application: 
 `git clone https://github.com/kevmhughes/ChitChat`
 
 2. Enter the root folder: 
 `cd ChitChat`
 
-3. Install dependencies:
+4. Install dependencies in the root folder:
 
+
+5. Open the project in the root folder:
+ `expo start`
 
 # Tools Used
 
@@ -93,4 +99,3 @@ https://docs.expo.io
 **Project dependencies**
 
 TRELLO board
-
