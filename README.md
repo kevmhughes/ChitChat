@@ -31,9 +31,13 @@ Made with **React Native**.
 5. Open the project in the root folder:
  `expo start`
  
-6. Download Android Studio: [Android Studio](https://developer.android.com/studio)
+6. Install Expo Go on your mobile device:[Expo Go](https://docs.expo.io/get-started/installation/)
+ 
+6. Download Android Studio to create an Android emulator: [Android Studio](https://developer.android.com/studio)
 
-7. Set up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
+7. Download Xcode to create an iOS simulatar: [Xcode](https://developer.apple.com/xcode/resources/)
+
+8. Set up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
 
 Modify the Firebase database details:
 your own AP, etc.
