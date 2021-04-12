@@ -33,12 +33,12 @@ Made with **React Native**.
  
 6. Download Android Studio: [Android Studio](https://developer.android.com/studio)
 
-7. Setting up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
+7. Set up Google Firebase: [Google Firebase](https://firebase.google.com/docs/storage/web/start)
 
-Modifying the database:
+Modify the Firebase database details:
 your own AP, etc.
 
-Creating the storage:
+Create the storage:
 Use "messages" as the name...
 
 # Tools Used
