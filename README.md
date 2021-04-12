@@ -82,4 +82,4 @@ Made with **React Native**.
     "react-navigation-stack": "^2.10.4"
 
 
-Kanban board: https://trello.com/b/55YjPSOt/careerfoundry-51
+Kanban board: [see here](https://trello.com/b/55YjPSOt/careerfoundry-51)
