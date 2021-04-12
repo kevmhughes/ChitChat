@@ -25,9 +25,9 @@ Made with **React Native**.
 2. Enter the root folder: 
 `cd ChitChat`
 
-4. Install dependencies in the root folder:
+4. Install dependencies in the root folder: [Dependencies](https://github.com/kevmhughes/ChitChat/blob/main/README.md#dependencies)
 
-   [Dependencies](https://github.com/kevmhughes/ChitChat/blob/main/README.md#dependencies)
+
 
 5. Open the project in the root folder:
  `expo start`
