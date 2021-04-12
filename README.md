@@ -27,30 +27,7 @@ Made with **React Native**.
 
 4. Install dependencies in the root folder:
 
-
-5. Open the project in the root folder:
- `expo start`
-
-# Tools Used
-
-### Frameworks
-* React Native
-* Expo CLI
-
-### Development Environment
-* Node.js
-* Android Studio
-* Expo Go
-
-### Libraries
-* Gifted Chat
-
-### Database & Storage
-* Google Firebase
-
-### Dependencies
-
-    "@react-native-community/async-storage": "~1.12.0",
+"@react-native-community/async-storage": "~1.12.0",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-native-community/netinfo": "^5.9.7",
     "@react-navigation/native": "^5.9.3",
@@ -76,5 +53,25 @@ Made with **React Native**.
     "react-native-web": "~0.13.12",
     "react-navigation": "^4.4.4",
     "react-navigation-stack": "^2.10.4"
+
+5. Open the project in the root folder:
+ `expo start`
+
+# Tools Used
+
+### Frameworks
+* React Native
+* Expo CLI
+
+### Development Environment
+* Node.js
+* Android Studio
+* Expo Go
+
+### Libraries
+* Gifted Chat
+
+### Database & Storage
+* Google Firebase    
 
 Kanban board: https://trello.com/b/55YjPSOt/careerfoundry-51
