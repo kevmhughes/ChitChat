@@ -14,7 +14,7 @@ Made with **React Native**.
 <img src="readme-images/ChitChat-on-iOS.gif" height="450"/>
 </kbd>
  
-# Running the application
+# Setting Up the Application
 
 1. Install the Expo CLI on your machine:
 `npm install expo-cli g`
