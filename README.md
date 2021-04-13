@@ -45,7 +45,7 @@ Made with **React Native**.
 
 * In Cloud Firestore, create a collection, name it "messages", and add the following fields.
 
-![Screenshot 2021-04-12 at 17 36 17](https://user-images.githubusercontent.com/48656356/114424687-a89bc280-9bb8-11eb-9bf3-647137f004c2.png)
+![Cloud Firestore collection](https://user-images.githubusercontent.com/48656356/114532046-bbf86d80-9c4c-11eb-9012-47c236e0ef5c.png)
 
 * Create the storage for the videos/photos: [Create storage](https://firebase.google.com/docs/storage?authuser=0)
 
