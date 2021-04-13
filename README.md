@@ -1,4 +1,3 @@
-![Collection](https://user-images.githubusercontent.com/48656356/114532245-f19d5680-9c4c-11eb-9162-a909f30a8009.png)
 # ChitChat
 Made with **React Native**.
 ## Description
