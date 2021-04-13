@@ -1,3 +1,4 @@
+![Collection](https://user-images.githubusercontent.com/48656356/114532245-f19d5680-9c4c-11eb-9162-a909f30a8009.png)
 # ChitChat
 Made with **React Native**.
 ## Description
@@ -45,7 +46,7 @@ Made with **React Native**.
 
 * In Cloud Firestore, create a collection, name it "messages", and add the following fields.
 
-![Cloud Firestore collection](https://user-images.githubusercontent.com/48656356/114532046-bbf86d80-9c4c-11eb-9012-47c236e0ef5c.png)
+![Collection](https://user-images.githubusercontent.com/48656356/114532245-f19d5680-9c4c-11eb-9162-a909f30a8009.png)
 
 * Create the storage for the videos/photos: [Create storage](https://firebase.google.com/docs/storage?authuser=0)
 
