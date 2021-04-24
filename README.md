@@ -1,7 +1,12 @@
 # ChitChat
 ChitChat was built with **React Native**.
-## Description
-**ChitChat** is a messenger service application for mobile phones similar to WhatsApp, with which users can do the following:
+
+# Description
+**ChitChat** is a messenger service application for mobile phones similar to WhatsApp
+
+# Features
+
+### Users are able to:
 
 * send and receive text messages.
 * send and receive images, or photos.
