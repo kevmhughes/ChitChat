@@ -9,7 +9,7 @@ ChitChat was built with **React Native**.
 <img src="readme-images/ChitChat-on-iOS.gif" height="450"/>
 </kbd>
 
-Click on the image if the view is not displayed correctly.
+Please click on the image if the view is not displayed correctly.
  
 # Tools Used
 
